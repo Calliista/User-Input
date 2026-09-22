@@ -6,8 +6,8 @@
             
         {
             //Tutorial
-            string name, username, firstName, lastName, loginName;
-            int age, ageTut, grade, studentID;
+            string name, username, firstName, lastName, loginName, namep3;
+            int age, ageTut, grade, studentID, agep3;
             double salary, gradeAverage;
 
             Console.WriteLine("Hello, World!");
@@ -50,8 +50,13 @@
             Console.WriteLine($"\t\tLogin:\t\t {lastName}, {firstName} ");
             Console.WriteLine("\t\tAverage:\t\t" + gradeAverage);
             Console.WriteLine("\t\tGrade (9-12):\t\t" + grade);
-            
 
+            //Part 3
+            Console.WriteLine("Hello. What is your name?");
+            namep3 = Console.ReadLine();
+            Console.WriteLine($"Hi {namep3}! How old are you?");
+            agep3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Did you know that in five years you will be {agep3 + 5} years old? And five years ago you were {agep3 - 5}! Imagine that!");
 
         }
     }
