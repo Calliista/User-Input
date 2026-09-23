@@ -6,9 +6,9 @@
             
         {
             //Tutorial
-            string name, username, firstName, lastName, loginName, namep3;
+            string name, username, firstName, lastName, loginName, namep3, item, item2;
             int age, ageTut, grade, studentID, agep3;
-            double salary, gradeAverage;
+            double salary, gradeAverage, prompt1, prompt2, prompt3, price, price2;
 
             Console.WriteLine("Hello, World!");
             Console.WriteLine("Enter username:");
@@ -58,6 +58,26 @@
             agep3 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Did you know that in five years you will be {agep3 + 5} years old? And five years ago you were {agep3 - 5}! Imagine that!");
 
+            //Part 4
+            Console.WriteLine("prompt1:");
+            prompt1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("prompt2:");
+            prompt2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("prompt3:");
+            prompt3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine((prompt1 + prompt2 + prompt3) / 2);
+
+            //Part 5
+
+            Console.WriteLine("item name:");
+            item = Console.ReadLine();
+            Console.WriteLine("item price:");
+            price = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("2nd item name:");
+            item2 = Console.ReadLine();
+            Console.WriteLine("2nd item price");
+            price2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Sales Receipt");
         }
     }
 }
