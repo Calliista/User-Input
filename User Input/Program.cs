@@ -1,4 +1,6 @@
-﻿namespace User_Input
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace User_Input
 {
     internal class Program
     {
@@ -8,7 +10,7 @@
             //Tutorial
             string name, username, firstName, lastName, loginName, namep3, item, item2;
             int age, ageTut, grade, studentID, agep3;
-            double salary, gradeAverage, prompt1, prompt2, prompt3, price, price2;
+            double salary, gradeAverage, prompt1, prompt2, prompt3, price, price2, discountedPrice, total, totalPrice, tax, discount;
 
             Console.WriteLine("Hello, World!");
             Console.WriteLine("Enter username:");
@@ -72,12 +74,26 @@
             Console.WriteLine("item name:");
             item = Console.ReadLine();
             Console.WriteLine("item price:");
-            price = Convert.ToInt32(Console.ReadLine());
+            Double.TryParse(Console.ReadLine(), out price);
             Console.WriteLine("2nd item name:");
             item2 = Console.ReadLine();
             Console.WriteLine("2nd item price");
-            price2 = Convert.ToInt32(Console.ReadLine());
+            Double.TryParse(Console.ReadLine(), out price2);
             Console.WriteLine("Sales Receipt");
+            Console.WriteLine();
+            total = price + price2;
+            discount = total * 0.2;
+            discountedPrice = total - discount;
+            tax = total * 0.13;
+            totalPrice = discountedPrice + tax;
+            Console.WriteLine("Total price: " + totalPrice.ToString("C" ));
+            Console.WriteLine("Discount (20%) " + discount.ToString("C "));
+            Console.WriteLine("Subtotal: " +  discountedPrice.ToString("C" ));
+            Console.WriteLine("Tax (13%)" + tax.ToString("C" ));
+            Console.WriteLine("total Owed: " + totalPrice);
+
+
+            //Int32.TryParse(Console.Readline(), out ___)
         }
     }
 }
